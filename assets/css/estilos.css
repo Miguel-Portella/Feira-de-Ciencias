@@ -95,6 +95,6 @@ hr{
     border-radius: 10px;
     background-color: green;
 }
-span{
-    color: green;
+a{
+    text-decoration: none;
 }
