@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Oxygen;
+}
+body{
+    background-color: rgb(14, 58, 14);
+}
+
+.cabecalho{
+    display: flex;
+    height: 50px;
+    background: linear-gradient(rgb(18, 170, 18), rgb(16, 105, 16));
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+.cabecalho h2{
+    text-shadow: 10px;
+    color: white;
+    -webkit-text-stroke: 1.5px black;
+}
+.corpo{
+    margin: auto;
+    background-color: rgb(165, 255, 165);
+    width: 90%;
+}
+p{
+    font-size: 10px;
+}
+.balaoazul{
+    background: linear-gradient(#0047FF, #001753);
+    border-radius: 15px;
+    text-align: center;
+    width: 70%;
+    margin: 10px auto;
+}
+.balaoazul p{
+    margin: 30px;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+    font-size: 15px;
+}
+h3{
+    margin: 15px;
+    text-align: center;
+}
+.inteligenciaartificial{
+    display: flex;
+}
+.textoia{
+    width: 50%;
+}
+.imagemia{
+    width: 50%;
+}
+hr{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.automatizacao{
+    display: flex;
+}
+.automatizacao img{
+    height: 50px;
+}
+.automatizacaoimagens{
+    width: 50%;
+}
+.automatizacaotexto{
+    width: 50%;
+}
+.aquadroneimg{
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}
+.aquadronetexto{
+    margin: 20px;
+}
+.calculadora{
+    margin-left: 100px;
+}
+.calculadora label{
+    margin-top: 30px;
+}
+.calculadora input{
+    border-radius: 10px;
+    background-color: green;
+}
+span{
+    color: green;
+}
