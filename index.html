@@ -151,6 +151,7 @@
                     
                     var carbonEmission = fuelAmount * emissionFactor;
                     document.getElementById("result").innerText = "A emissão de carbono que você produz é aproximadamente " + carbonEmission.toFixed(2) + "  kg por mês.";
+                    document.getElementById("result").style.color = "Black";
                     if (isNaN(fuelAmount)) {
                         document.getElementById("result").innerText = "Insira um valor válido na quantidade de combustivel em litros por mês!";
                         document.getElementById("result").style.color = "red";
