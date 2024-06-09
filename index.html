@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <link rel="shortcut icon" href="./assets/imagens/icones/simbolo cmcg quadrado.png" type="image/x-icon">
+    <title>Feira de Ciências</title>
+</head>
+<body>
+        <!---------------
+                                Cabeçalho
+                                                     ------------------------->
+
+    <header>
+        <div class="cabecalho">
+            <img src="./assets/imagens/icones/cmcg simbolo.png" alt="" height="45px">
+            <h2>Feira de ciências CMCG</h2>
+            <img src="./assets/imagens/icones/cmcg simbolo.png" alt="" height="45px">
+        </div>
+
+    </header>
+
+    <!---------------------------
+                                    iniício
+                                                    ----------------------->
+    <div class="corpo" style="padding-bottom: 40px;">
+        <p style="padding: 15px; text-align: center;">
+            Como as tecnologias de desenvolvimento de software ajudam na conscientização da preservação do meio ambiente?
+        </p>
+        <div class="balaoazul">
+            <p>
+                Acredita-se que o desenvolvimento de software teve início em 1948 Tom Kilburn e Freddie Williams na Universidade de Manchester.
+            </p>
+        </div>
+        <p>
+            Desde então sempre essa tecnologia foi evoluindo e nos auxiliando no dia a dia e na preservação do meio ambiente como por exemplo:
+        </p>
+        <h3>
+            Nas criações de inteligências artificiais...
+        </h3>
+        <div class="inteligenciaartificial">
+            <div class="textoia">
+                <p>
+                    O ChatGPT é uma ferramenta  de inteligência artificial que nos auxilia em diversas atividades no dia a dia, sendo na criação de 
+                    tabelas, pesquisas, lá é possivel encontrar diversas formas de preservar o meio ambiente de todas as formas, basta perguntar.
+                </p>
+            </div>
+            <div class="imagemia">
+                <img src="assets/imagens/imagens/chat gtp.png" alt="" height="90px">
+            </div>
+
+        </div>
+        <hr>
+        <h3>
+            Na automatização de rotinas repetitivas...
+        </h3>
+
+        <div class="automatizacao">
+            <div class="automatizacaoimagens">
+                <img src="./assets/imagens/imagens/Python.png" alt="">
+                <img src="./assets/imagens/imagens/Scrapy.png" alt="">
+                <img src="./assets/imagens/imagens/Robot Frame Work.png" alt="">
+
+            </div>
+            <div class="automatizacaotexto">
+                <p>
+                    Python é a linguagem de programação mais usada para a automação de tarefas repetitivas, 
+                    contando com bibliotecas que auxiliam nessas atividades sendo umas das mais famosas: PyAutoGUI 
+                    (controla o cursor e o teclado de forma automática), Scrapy (extrai informações de sites 
+                    automaticamente), Robot Framework (usada na robótica).
+                </p>
+            </div>
+
+        </div>
+        <hr>
+        <h3>
+            E na criação de robôs para a limpeza de rios...
+        </h3>
+        <img src="assets/imagens/imagens/aquadrone.webp" alt="" class="aquadroneimg">
+        <p class="aquadronetexto">
+            Também chamado de “aquadrone”, o WasteShark possui a forma de um catamarã, sendo inspirado na boca 
+            larga de um tubarão-baleia. O veículo autônomo pode coletar até 500 kg de detritos por dia ou o equivalente 
+            a consumir cerca de 21 mil garrafas de plástico.
+        </p>
+        
+            <div class="balaoazul">
+                <h2 style="color: white; -webkit-text-stroke: 1px black;">
+                    Calculadora de emissão de carbono
+                </h2>
+            </div>
+
+            <!--
+                    Inputs para calcular a quantidade de carbono produzida
+                                                                              -->
+        <div class="calculadora">
+            <div class="container">
+                <div class="input-group">
+                    <label for="fuelType" style="display: flex;">Tipo de Combustível:</label>
+                    <select id="fuelType" style="background-color: green; border-radius: 10px;">
+                        <option value="gasolina">Gasolina</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="etanol">Etanol</option>
+                        <option value="gnv">GNV</option>
+                        <option value="eletricidade">Eletricidade</option>
+                        <option value="biodiesel">Biodiesel</option>
+                        <option value="hidrogenio">Hidrogênio</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="fuelAmount" style="display: flex; margin-bottom: 15px;">Quantidade de combustivel em litros no mês:</label>
+                    <input type="number" id="fuelAmount" min="0" step="any" style="margin-bottom: 30px;">
+                </div>
+                <button onclick="calculateCarbon()" style="background-color: rgb(5, 206, 5); border-radius: 10px;">Calcular Emissão de Carbono</button>
+                <h3 style="text-align: left;" id="result" >A emissão de CO₂ será exibida aqui...</h3>
+            </div>
+        <!--
+                Script da calculadora de carbono
+                                                    -->
+            <script>
+                function calculateCarbon() {
+                    var fuelType = document.getElementById("fuelType").value;
+                    var fuelAmount = parseFloat(document.getElementById("fuelAmount").value);
+                    var emissionFactor;
+                    
+                    switch(fuelType) {
+                        case "gasolina":
+                            emissionFactor = 2.31;
+                            break;
+                        case "diesel":
+                            emissionFactor = 2.68;
+                            break;
+                        case "etanol":
+                            emissionFactor = 1.50;
+                            break;
+                        case "gnv":
+                            emissionFactor = 2.75;
+                            break;
+                        case "eletricidade":
+                            emissionFactor = 0.233;
+                            break;
+                        case "biodiesel":
+                            emissionFactor = 2.52;
+                            break;
+                        case "hidrogenio":
+                            emissionFactor = 13.8;
+                            break;
+                        default:
+                            emissionFactor = 0;
+                    }
+                    
+                    var carbonEmission = fuelAmount * emissionFactor;
+                    document.getElementById("result").innerText = "A emissão de carbono que você produz é aproximadamente " + carbonEmission.toFixed(2) + "  kg por mês.";
+                    if (isNaN(fuelAmount)) {
+                        document.getElementById("result").innerText = "Insira um valor válido na quantidade de combustivel em litros por mês!";
+                        document.getElementById("result").style.color = "red";
+                    }
+                }
+            </script>
+        </div>
+
+
+
+    </div>
+    <footer>
+        <a href="pagina2.html">Sobre os Alunos</a>
+    </footer>
+    
+</body>
+</html>
