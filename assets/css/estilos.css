@@ -115,3 +115,24 @@ a{
     font-family: Roboto;
     color: aqua;
 }
+button:hover{
+    box-shadow: 3px 3px 8px black;
+}
+
+
+/*----------------------------página secundária-------------------------------------*/
+
+
+
+.aluno{
+    display: flex;
+}
+.foto-p2{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.texto-p2{
+    width: 50%;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/estilos.css">
-    <link rel="shortcut icon" href="./assets/imagens/icones/simbolo cmcg quadrado.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/imagens/icones/logo-cmcg.d27b5cb7.png" type="image/x-icon">
     <title>Feira de Ciências</title>
 </head>
 <body>
@@ -14,9 +14,9 @@
 
     <header>
         <div class="cabecalho">
-            <img src="./assets/imagens/icones/cmcg simbolo.png" alt="" height="45px">
+            <img src="./assets/imagens/icones/logo-cmcg.d27b5cb7.png" alt="" height="45px">
             <h2>Feira de ciências CMCG</h2>
-            <img src="./assets/imagens/icones/cmcg simbolo.png" alt="" height="45px">
+            <img src="./assets/imagens/icones/logo-cmcg.d27b5cb7.png" alt="" height="45px">
         </div>
 
     </header>
@@ -117,47 +117,11 @@
         <!--
                 Script da calculadora de carbono
                                                     -->
-            <script>
-                function calculateCarbon() {
-                    var fuelType = document.getElementById("fuelType").value;
-                    var fuelAmount = parseFloat(document.getElementById("fuelAmount").value);
-                    var emissionFactor;
-                    
-                    switch(fuelType) {
-                        case "gasolina":
-                            emissionFactor = 2.31;
-                            break;
-                        case "diesel":
-                            emissionFactor = 2.68;
-                            break;
-                        case "etanol":
-                            emissionFactor = 1.50;
-                            break;
-                        case "gnv":
-                            emissionFactor = 2.75;
-                            break;
-                        case "eletricidade":
-                            emissionFactor = 0.233;
-                            break;
-                        case "biodiesel":
-                            emissionFactor = 2.52;
-                            break;
-                        case "hidrogenio":
-                            emissionFactor = 13.8;
-                            break;
-                        default:
-                            emissionFactor = 0;
-                    }
-                    
-                    var carbonEmission = fuelAmount * emissionFactor;
-                    document.getElementById("result").innerText = "A emissão de carbono que você produz é aproximadamente " + carbonEmission.toFixed(2) + "  kg por mês.";
-                    document.getElementById("result").style.color = "Black";
-                    if (isNaN(fuelAmount)) {
-                        document.getElementById("result").innerText = "Insira um valor válido na quantidade de combustivel em litros por mês!";
-                        document.getElementById("result").style.color = "red";
-                    }
-                }
-            </script>
+
+
+            <script src="assets/js/script.js"></script>
+
+            
         </div>
 
 
